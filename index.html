@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XO</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+
+  <style>
+    @font-face {
+      font-family: "MyLocalFont";
+      src: url("redaction35-regular.otf") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "MyLocalFont";
+      src: url("redaction35-italic.otf") format("woff2");
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: auto !important;
+      min-height: 100% !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      font-family: "MyLocalFont", system-ui, sans-serif;
+      background: transparent;
+    }
+
+    #scrollSpace { height: 500vh; }
+
+    #bgLayer {
+      position: fixed;
+      inset: -10%;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at center,
+        #fce6f2 0%,
+        #f4a7cc 55%,
+        #f4a7cc 100%
+      );
+    }
+
+    #heroSvgWrap {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      transition: opacity 250ms ease;
+    }
+
+    #heroSvgWrap.hidden { opacity: 0; }
+
+    /* Ensure the picture behaves like your previous img */
+    #heroSvgWrap picture,
+    #heroSvgWrap img,
+    #heroSvgWrap svg {
+      height: 100vh;
+      width: auto;
+      display: block;
+    }
+
+    canvas {
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      z-index: 2;
+      pointer-events: none;
+      background: transparent !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="bgLayer"></div>
+
+  <div id="heroSvgWrap">
+    <picture>
+      <source media="(max-width: 767px)" srcset="xo3-mobile.svg" />
+      <img src="xo4.svg" alt="XO Hero" />
+    </picture>
+  </div>
+
+  <div id="scrollSpace"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

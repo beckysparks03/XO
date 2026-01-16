@@ -69,7 +69,7 @@ const STYLED_TITLES = [
   {
     lines: [
       [{ t: "16.02.2026", i: true }],
-      [{ t: "7pm-late", i: true }],
+      [{ t: "6-9:30pm", i: true }],
     ],
   },
 

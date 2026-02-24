@@ -51,8 +51,8 @@ const TOP_IMAGE_FILES = [
   "6.png",
   "7.png"
 ];
-const FONT_FILE = "Redaction35-Regular.otf";
-const ITALIC_FONT_FILE = "Redaction35-Italic.otf";
+const FONT_FILE = "redaction35-regular.otf";
+const ITALIC_FONT_FILE = "redaction35-italic.otf";
 
 const ITALIC_START = "\uE000";
 const ITALIC_END = "\uE001";

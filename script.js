@@ -151,7 +151,7 @@ const bank = {
     "you ran out of ink","the wifi’s out"
   ],
 
-  name: ["David","Keli","Neil","Anna","Becky","Kevin","Andrew","Boshi","Pippa"],
+  name: ["David","Keli","Neil","Anna","Becky","Kevin","Andrew","Boshi","Pippa","Bea"],
 
   designcringe: [
     "circle back","touch base","synergise","follow best practice",
